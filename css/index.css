@@ -30,7 +30,7 @@ header {
 }
 
 .hero {
-    background: url('/imgs/bg.jpg') no-repeat center center;
+    background: url('../imgs/bg.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -162,8 +162,46 @@ nav {
     padding: 5rem 0 10rem;
 }
 
+.explore-items {
+    position: relative;
+}
+
+.explore-hover::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #000222 0%, #fc88b4 100%);
+    position: absolute;
+    opacity: .7;
+    transition: all .3s ease-in-out;
+}
+
 .explore-items img {
     width: 100%;
+}
+
+.caption {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -100%);
+    z-index: 10;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+.explore-hover .caption {
+    display: block;
+}
+
+.caption h4 {
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    color: #ffffff;
 }
 
 .bigtitle {
